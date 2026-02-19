@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router";
-import { Menu, X, Heart } from "lucide-react";
+import { Menu, X, Heart, ClipboardList } from "lucide-react";
 const logo = "/images/logo.svg";
 
 const navLinks = [
@@ -51,6 +51,14 @@ export function Navbar() {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
             <Link
+              to="/enroll"
+              className="px-4 py-2 text-sm rounded-lg border border-royal text-royal hover:bg-royal/10 transition-colors flex items-center gap-1.5"
+              style={{ fontWeight: 600 }}
+            >
+              <ClipboardList className="w-3.5 h-3.5" />
+              Enroll
+            </Link>
+            <Link
               to="/register"
               className="px-4 py-2 text-sm rounded-lg bg-royal text-white hover:bg-royal/90 transition-colors"
               style={{ fontWeight: 600 }}
@@ -98,6 +106,15 @@ export function Navbar() {
               </Link>
             ))}
             <div className="pt-3 flex flex-col gap-2">
+              <Link
+                to="/enroll"
+                onClick={() => setMobileOpen(false)}
+                className="px-4 py-3 text-sm text-center rounded-lg border border-royal text-royal flex items-center justify-center gap-2"
+                style={{ fontWeight: 600 }}
+              >
+                <ClipboardList className="w-4 h-4" />
+                32n Enrollment
+              </Link>
               <Link
                 to="/register"
                 onClick={() => setMobileOpen(false)}
