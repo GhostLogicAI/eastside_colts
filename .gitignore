@@ -1,0 +1,19 @@
+node_modules
+dist
+.env
+.env.local
+*.local
+.DS_Store
+Thumbs.db
+
+# Extracted/temp files from Figma export
+src_extracted
+guidelines_extracted
+*.zip
+ATTRIBUTIONS*.md
+package\ (1).json
+vite.config\ (1).ts
+postcss.config\ (1).mjs
+download*.jpg
+images.jpg
+nul
